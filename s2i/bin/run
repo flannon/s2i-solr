@@ -1,0 +1,27 @@
+#!/bin/bash -e
+#
+# S2I run script for the 'centos/centos7' image.
+# The run script executes the server that runs your application.
+#
+# For more information see the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+#exec /usr/sbin/nginx -g "daemon off;"
+
+#echo "Running app on port 8080..."
+#
+#set -eo pipefail
+#
+#echo "In s2i"
+#echo $(pwd)
+
+#exec ${HOME}/run
+
+#exec /usr/sbin/nginx -g "daemon off;"
+
+
+set -eo pipefail
+
+exec ${HOME}/run
+exec ${HOME}/entrypoint.sh
