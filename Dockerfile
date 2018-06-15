@@ -1,4 +1,18 @@
 FROM tomcat:8.5.15-jre8-alpine@sha256:eaf901f324d9f49a492270b28669b32a2d7b418db8c649c2268531ddefaa0b01
+MAINTAINER Flannon Jackson "flannon@nyu.edu"
+
+
+ENV STI_SCRIPTS_PATH=/usr/libexec/s2i
+
+LABEL io.k8s.description="Run solr from tomcat in OpenShift" \
+      io.k8s.display-name="Tomcat 8.5.15" \
+      io.openshift.expose-services="8080:http" \
+      io.openshift.tags="builder,tomcat,solr4.10.4" \
+      io.openshift.s2i.scripts-url="image:///${STI_SCRIPTS_PATH}"
+
+COPY ./s2i/bin/. ${STI_SCRIPTS_PATH}
+RUN chmod -R a+rx ${STI_SCRIPTS_PATH}
+
 
 ENV SOLR_VERSION=4.10.4 \
     SOLR_HOME=/shared/solr \
