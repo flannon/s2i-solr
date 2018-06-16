@@ -75,7 +75,9 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties && \
     chmod 777 /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
     chmod -R 777 /usr/local && \
-    find /usr/local -type d -exec chmod g+ws {} \;
+    chmod -R 777 ${SOLR_HOME} && \
+    chmod -R 777 ${SOLR_DIST} 
+    
 
 #RUN chown -R 1001:1001 /opt/app-root && \
 #RUN chown -R 1001: /tmp/${SOLR_DIST} && \
