@@ -8,8 +8,8 @@ MAINTAINER Flannon Jackson "flannon@nyu.edu"
 # ENV BUILDER_VERSION 1.0
 ENV STI_SCRIPTS_PATH=/usr/libexec/s2i \
     SOLR_VERSION=4.10.4 \
-    #SOLR_HOME=/shared/solr \
-    SOLR_HOME=/opt/app-root \
+    SOLR_HOME=/shared/solr \
+    #SOLR_HOME=/opt/app-root \
     SOLR_PORT=8080 \
     DEBUG_PORT=5009
 
@@ -74,7 +74,8 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     rm -rf /root/.victims*                                                               && \
     echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties && \
     chmod 777 /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
-    chmod -R 777 /usr/local/tomcat
+    chmod -R 777 /usr/local
+    find /usr/local -type d -exec chmod g+ws {} \;
 
 #RUN chown -R 1001:1001 /opt/app-root && \
 #RUN chown -R 1001: /tmp/${SOLR_DIST} && \
