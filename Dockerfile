@@ -33,7 +33,7 @@ ENV HOME=/opt/app-root
 RUN mkdir -p ${HOME} && \
     [[ $(grep default /etc/passwd) ]] || \
         #useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
-        adduser -D -u 1001 -S --gid 1001 -h ${HOME} -s /sbin/nologin \ 
+        adduser -D -u 1001 -S -h ${HOME} -s /sbin/nologin \ 
         -g "Default Application User" default
 
 COPY ./entrypoint.sh ${HOME}
