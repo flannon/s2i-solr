@@ -57,8 +57,8 @@ EXPOSE 8080
 
 RUN mkdir -p /usr/local/tomcat/lib && \
     #[[ ! -d /usr/local/tomcat/temp ]] && mkdir /usr/local/tomcat/temp && \
-    mkdir  /usr/local/tomcat/webapps && \
-    mkdir  /usr/local/tomcat/work && \
+    #mkdir  /usr/local/tomcat/webapps && \
+    #mkdir  /usr/local/tomcat/work && \
     find /usr/local -type d -exec chmod g+ws {} \; && \
     ls /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
     ls /usr/local/tomcat/lib && \
