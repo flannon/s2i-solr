@@ -56,7 +56,7 @@ USER 1001
 EXPOSE 8080
 
 RUN mkdir -p /usr/local/tomcat/lib && \
-    [[ ! -d /usr/local/tomcat/temp ]] && mkdir /usr/local/tomcat/temp && \
+    #[[ ! -d /usr/local/tomcat/temp ]] && mkdir /usr/local/tomcat/temp && \
     mkdir  /usr/local/tomcat/webapps && \
     mkdir  /usr/local/tomcat/work && \
     find /usr/local -type d -exec chmod g+ws {} \; && \
