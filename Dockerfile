@@ -59,7 +59,8 @@ RUN mkdir -p /usr/local/tomcat/lib && \
     #[[ ! -d /usr/local/tomcat/temp ]] && mkdir /usr/local/tomcat/temp && \
     #mkdir  /usr/local/tomcat/webapps && \
     #mkdir  /usr/local/tomcat/work && \
-    find /usr/local -type d -exec chmod g+ws {} \; && \
+    #find /usr/local -type d -exec chmod g+ws {} \; && \
+    chown -R 1001 /usr/local
     ls /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
     ls /usr/local/tomcat/lib && \
     ls /usr/local/tomcat && \
