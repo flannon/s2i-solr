@@ -55,6 +55,16 @@ USER 1001
 # TODO: Set the default port for applications built using this image
 EXPOSE 8080
 
+RUN mkdir -p /usr/local/tomcat/lib && \
+    find /usr/local -type d -exec chmod g+ws {} \;
+    ls /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
+    ls /usr/local/tomcat/lib && \
+    ls /usr/local/tomcat && \
+    ls /usr/local && \
+    ls /usr && \
+    ls /tmp/${SOLR_DIST} && \
+    ls /tmp
+    
 RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     wget -O /tmp/${SOLR_DIST}.tgz \
         http://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/${SOLR_DIST}.tgz && \
@@ -80,13 +90,6 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     chmod -R 777 /tmp/${SOLR_DIST} 
     
 
-RUN ls /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
-    ls /usr/local/tomcat/lib && \
-    ls /usr/local/tomcat && \
-    ls /usr/local && \
-    ls /usr && \
-    ls /tmp/${SOLR_DIST} && \
-    ls /tmp
 #RUN chown -R 1001:1001 /opt/app-root && \
 #RUN chown -R 1001: /tmp/${SOLR_DIST} && \
 #    chown -R 1001: /usr/local/tomcat
