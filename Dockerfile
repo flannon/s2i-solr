@@ -77,8 +77,16 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     chmod -R 777 /usr/local && \
     chmod -R 777 ${SOLR_HOME} && \
     chmod -R 777 ${SOLR_DIST} 
+    chmod -R 777 /tmp/${SOLR_DIST} 
     
 
+RUN ls /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
+    ls /usr/local/tomcat/lib && \
+    ls /usr/local/tomcat && \
+    ls /usr/local && \
+    ls /usr && \
+    ls /tmp/${SOLR_DIST} && \
+    ls /tmp
 #RUN chown -R 1001:1001 /opt/app-root && \
 #RUN chown -R 1001: /tmp/${SOLR_DIST} && \
 #    chown -R 1001: /usr/local/tomcat
