@@ -72,9 +72,9 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     touch ${CATALINA_HOME}/velocity.log && \
     rm -rf /tmp/${SOLR_DIST}* && \
     rm -rf /root/.victims*                                                               && \
-    echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties \
-    chown -R 1001: /tmp/${SOLR_DIST}
-    chown -R 1001: /usr/local/tomcat
+    echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties 
+    #chown -R 1001: /tmp/${SOLR_DIST}
+    #chown -R 1001: /usr/local/tomcat
 
 
 COPY schema.xml ${SOLR_HOME}/collection1/conf
