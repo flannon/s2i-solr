@@ -32,7 +32,8 @@ LABEL io.k8s.description="Tomcat 8.5.15 running Solr 4.10.4" \
 ENV HOME=/opt/app-root
 RUN mkdir -p ${HOME} && \
     [[ $(grep default /etc/passwd) ]] || \
-        useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
+        #useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
+        adduser -D -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \ 
         -c "Default Application User" default
 
 COPY ./entrypoint.sh ${HOME}
