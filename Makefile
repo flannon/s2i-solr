@@ -1,5 +1,5 @@
 
-IMAGE_NAME = flannon/s2i-solr-4-10
+IMAGE_NAME = tomcatSolr4.10.4
 
 .PHONY: build
 build:
