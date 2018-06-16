@@ -56,7 +56,7 @@ USER 1001
 EXPOSE 8080
 
 RUN mkdir -p /usr/local/tomcat/lib && \
-    find /usr/local -type d -exec chmod g+ws {} \;
+    find /usr/local -type d -exec chmod g+ws {} \; && \
     ls /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
     ls /usr/local/tomcat/lib && \
     ls /usr/local/tomcat && \
