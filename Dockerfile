@@ -86,7 +86,7 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     #cp /tmp/${SOLR_DIST}/example/lib/ext/log4j* ${CATALINA_HOME}/lib && \
     #touch ${CATALINA_HOME}/velocity.log && \
     rm -rf /tmp/${SOLR_DIST}* && \
-    rm -rf /root/.victims*                                                               && \
+    #rm -rf /root/.victims*                                                               && \
     echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties 
     #chmod 777 /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
     #chmod -R 777 /usr/local && \
