@@ -8,8 +8,8 @@ MAINTAINER Flannon Jackson "flannon@nyu.edu"
 # ENV BUILDER_VERSION 1.0
 ENV STI_SCRIPTS_PATH=/usr/libexec/s2i \
     SOLR_VERSION=4.10.4 \
-    SOLR_HOME=/shared/solr \
-    #SOLR_HOME=/opt/app-root \
+    #SOLR_HOME=/shared/solr \
+    SOLR_HOME=/opt/app-root \
     SOLR_PORT=8080 \
     DEBUG_PORT=5009
 
