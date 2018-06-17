@@ -80,8 +80,8 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     #tar xzvf /tmp/${SOLR_DIST}.tgz -C /tmp && \
     #cp /tmp/${SOLR_DIST}/dist/${SOLR_DIST}.war ${CATALINA_HOME}/webapps/solr.war && \
     mkdir -p ${SOLR_HOME}/collection1/conf && \
-    cp -Rv /tmp/${SOLR_DIST}/example/solr/* ${SOLR_HOME} && \
-    cp /tmp/${SOLR_DIST}/example/resources/log4j.properties ${CATALINA_HOME}/lib && \
+    #cp -Rv /tmp/${SOLR_DIST}/example/solr/* ${SOLR_HOME} && \
+    #cp /tmp/${SOLR_DIST}/example/resources/log4j.properties ${CATALINA_HOME}/lib && \
     #cp /tmp/${SOLR_DIST}/example/lib/ext/slf4j* ${CATALINA_HOME}/lib && \
     #cp /tmp/${SOLR_DIST}/example/lib/ext/log4j* ${CATALINA_HOME}/lib && \
     touch ${CATALINA_HOME}/velocity.log && \
