@@ -71,11 +71,11 @@ EXPOSE 8080
 #    ls /tmp/${SOLR_DIST} && \
 #    ls /tmp
     
-RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
-    wget -O /tmp/${SOLR_DIST}.tgz \
-        http://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/${SOLR_DIST}.tgz && \
-    echo "0edf666bea51990524e520bdcb811e14b4de4c41 */tmp/${SOLR_DIST}.tgz" \
-          sha1sum -c -                                                             && \
+#RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
+#    wget -O /tmp/${SOLR_DIST}.tgz \
+#        http://archive.apache.org/dist/lucene/solr/${SOLR_VERSION}/${SOLR_DIST}.tgz && \
+#    echo "0edf666bea51990524e520bdcb811e14b4de4c41 */tmp/${SOLR_DIST}.tgz" \
+#          sha1sum -c -                                                             && \
     #wget -O ${CATALINA_HOME}/lib/commons-logging-1.1.2.jar \
     #   http://central.maven.org/maven2/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar && \
     #tar xzvf /tmp/${SOLR_DIST}.tgz -C /tmp && \
