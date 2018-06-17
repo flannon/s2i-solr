@@ -10,4 +10,4 @@ then
   OPTS="${OPTS} `echo ${DEBUG_ARG} | envsubst`"
 fi
 
-CATALINA_OPTS="${OPTS}" catalina.sh run
+#CATALINA_OPTS="${OPTS}" catalina.sh run
