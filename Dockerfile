@@ -1,4 +1,4 @@
-
+e
 # tomcatSolr4.10.4
 #FROM openshift/base-centos7
 FROM tomcat:8.5.15-jre8-alpine@sha256:eaf901f324d9f49a492270b28669b32a2d7b418db8c649c2268531ddefaa0b01
@@ -9,7 +9,9 @@ MAINTAINER Flannon Jackson "flannon@nyu.edu"
 ENV STI_SCRIPTS_PATH=/usr/libexec/s2i \
     SOLR_VERSION=4.10.4 \
     #SOLR_HOME=/shared/solr \
-    SOLR_HOME=/opt/app-root \
+    HOME=/opt/app-root \
+    CATALINA_HOME=/opt/app-root/tomcat \
+    SOLR_HOME=/opt/app-root/solr \
     SOLR_PORT=8080 \
     DEBUG_PORT=5009
 
@@ -29,7 +31,7 @@ LABEL io.k8s.description="Tomcat 8.5.15 running Solr 4.10.4" \
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
 
-ENV HOME=/opt/app-root
+#ENV HOME=/opt/app-root
 RUN mkdir -p ${HOME} && \
     [[ $(grep default /etc/passwd) ]] || \
         #useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
