@@ -17,6 +17,13 @@ ENV STI_SCRIPTS_PATH=/usr/libexec/s2i \
     DEBUG_PORT=5009
 
 
+#ENV HOME=/opt/app-root
+RUN mkdir -p ${HOME} && \
+    [[ $(grep default /etc/passwd) ]] || \
+        #useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
+        adduser -D -u 1001 -S -h ${HOME} -s /sbin/nologin \ 
+        -g "Default Application User" default
+
 # TODO: Set labels used in OpenShift to describe the builder image
 LABEL io.k8s.description="Tomcat 8.5.15 running Solr 4.10.4" \
       io.k8s.display-name="builder 0.0.1" \
@@ -31,13 +38,6 @@ LABEL io.k8s.description="Tomcat 8.5.15 running Solr 4.10.4" \
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
-
-#ENV HOME=/opt/app-root
-RUN mkdir -p ${HOME} && \
-    [[ $(grep default /etc/passwd) ]] || \
-        #useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
-        adduser -D -u 1001 -S -h ${HOME} -s /sbin/nologin \ 
-        -g "Default Application User" default
 
 COPY ./entrypoint.sh ${HOME}
 COPY ./schema.xml ${HOME}
