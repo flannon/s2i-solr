@@ -111,5 +111,5 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
 
 # TODO: Set the default CMD for the image
 # CMD ["/usr/libexec/s2i/usage"]
-ENTRYPOINT [ "${HOME}/entrypoint.sh" ]
+#ENTRYPOINT [ "${HOME}/entrypoint.sh" ]
 #CMD ["/usr/libexec/s2i/bin/run"]
