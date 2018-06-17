@@ -105,7 +105,7 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
 
 #COPY entrypoint.sh /
 
-RUN chmod 777 /entrypoint.sh
+#RUN chmod 777 /entrypoint.sh
 
 WORKDIR ${HOME}
 
