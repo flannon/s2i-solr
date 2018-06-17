@@ -80,13 +80,13 @@ EXPOSE 8080
     #   http://central.maven.org/maven2/commons-logging/commons-logging/1.1.2/commons-logging-1.1.2.jar && \
     #tar xzvf /tmp/${SOLR_DIST}.tgz -C /tmp && \
     #cp /tmp/${SOLR_DIST}/dist/${SOLR_DIST}.war ${CATALINA_HOME}/webapps/solr.war && \
-    mkdir -p ${SOLR_HOME}/collection1/conf && \
+#    mkdir -p ${SOLR_HOME}/collection1/conf && \
     #cp -Rv /tmp/${SOLR_DIST}/example/solr/* ${SOLR_HOME} && \
     #cp /tmp/${SOLR_DIST}/example/resources/log4j.properties ${CATALINA_HOME}/lib && \
     #cp /tmp/${SOLR_DIST}/example/lib/ext/slf4j* ${CATALINA_HOME}/lib && \
     #cp /tmp/${SOLR_DIST}/example/lib/ext/log4j* ${CATALINA_HOME}/lib && \
     #touch ${CATALINA_HOME}/velocity.log && \
-    rm -rf /tmp/${SOLR_DIST}* && \
+#    rm -rf /tmp/${SOLR_DIST}* && \
     #rm -rf /root/.victims*                                                               && \
     #echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties 
     #chmod 777 /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
