@@ -107,7 +107,7 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
 
 #RUN chmod 777 /entrypoint.sh
 
-WORKDIR ${HOME}
+#WORKDIR ${HOME}
 
 # TODO: Set the default CMD for the image
 # CMD ["/usr/libexec/s2i/usage"]
