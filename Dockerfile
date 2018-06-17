@@ -1,8 +1,8 @@
 
 # tomcatSolr4.10.4
-#FROM openshift/base-centos7
+FROM openshift/base-centos7
 #FROM tomcat:8.5.15-jre8-alpine@sha256:eaf901f324d9f49a492270b28669b32a2d7b418db8c649c2268531ddefaa0b01
-FROM solr:5.5.5-alpine
+#FROM solr:5.5.5-alpine
 MAINTAINER Flannon Jackson "flannon@nyu.edu"
 
 # TODO: Rename the builder environment variable to inform users about application you provide them
