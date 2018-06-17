@@ -103,7 +103,7 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
 
 #COPY schema.xml ${SOLR_HOME}/collection1/conf
 
-COPY entrypoint.sh /
+#COPY entrypoint.sh /
 
 RUN chmod 777 /entrypoint.sh
 
