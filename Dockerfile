@@ -84,7 +84,7 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     #cp /tmp/${SOLR_DIST}/example/resources/log4j.properties ${CATALINA_HOME}/lib && \
     #cp /tmp/${SOLR_DIST}/example/lib/ext/slf4j* ${CATALINA_HOME}/lib && \
     #cp /tmp/${SOLR_DIST}/example/lib/ext/log4j* ${CATALINA_HOME}/lib && \
-    touch ${CATALINA_HOME}/velocity.log && \
+    #touch ${CATALINA_HOME}/velocity.log && \
     rm -rf /tmp/${SOLR_DIST}* && \
     rm -rf /root/.victims*                                                               && \
     echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties 
