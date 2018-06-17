@@ -1,4 +1,4 @@
-e
+
 # tomcatSolr4.10.4
 #FROM openshift/base-centos7
 FROM tomcat:8.5.15-jre8-alpine@sha256:eaf901f324d9f49a492270b28669b32a2d7b418db8c649c2268531ddefaa0b01
