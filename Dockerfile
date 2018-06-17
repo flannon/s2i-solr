@@ -61,7 +61,7 @@ RUN mkdir -p /usr/local/tomcat/lib && \
     #mkdir  /usr/local/tomcat/work && \
     #find /usr/local -type d -exec chmod g+ws {} \; && \
     #chown -R 1001 /usr/local && \
-    chmod 777 /usr/local/tomcat && \
+    #chmod 777 /usr/local/tomcat && \
     ls /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
     ls /usr/local/tomcat/lib && \
     ls /usr/local/tomcat && \
@@ -87,12 +87,12 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
     touch ${CATALINA_HOME}/velocity.log && \
     rm -rf /tmp/${SOLR_DIST}* && \
     rm -rf /root/.victims*                                                               && \
-    echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties && \
-    chmod 777 /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
-    chmod -R 777 /usr/local && \
-    chmod -R 777 ${SOLR_HOME} && \
-    chmod -R 777 ${SOLR_DIST} && \
-    chmod -R 777 /tmp/${SOLR_DIST} 
+    echo "solr.solr.home=${SOLR_HOME}" >> ${CATALINA_HOME}/conf/catalina.properties 
+    #chmod 777 /usr/local/tomcat/lib/commons-loggin-1.1.2.jar && \
+    #chmod -R 777 /usr/local && \
+    #chmod -R 777 ${SOLR_HOME} && \
+    #chmod -R 777 ${SOLR_DIST} && \
+    #chmod -R 777 /tmp/${SOLR_DIST} 
     
 
 #RUN chown -R 1001:1001 /opt/app-root && \
