@@ -101,7 +101,7 @@ RUN export SOLR_DIST=solr-${SOLR_VERSION}      && \
 #    chown -R 1001: /usr/local/tomcat
 
 
-COPY schema.xml ${SOLR_HOME}/collection1/conf
+#COPY schema.xml ${SOLR_HOME}/collection1/conf
 
 COPY entrypoint.sh /
 
